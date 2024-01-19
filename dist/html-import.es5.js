@@ -178,8 +178,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 // current document yet again before this processing instance is finished
                 //
                  
-                var nested = Array.from(div.querySelectorAll(BLOGGER_SELECTOR));
-                nested.push(...Array.from(div.querySelectorAll(LEGACY_SELECTOR)));
+                var nested = Array.from(div.querySelectorAll(IMPORT_SELECTOR));
                 return (nested.length ? this.importForElements(nested).then(() => div.innerHTML) : html);
                 
               }
@@ -333,5 +332,5 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       })); // importer.loadJs
 
       //
-      // HTML import
+      // filtered-html-import
       //
